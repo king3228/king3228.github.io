@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Task</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #posts-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .post-item {
+            background: #f1f1f1;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .post-item:hover {
+            background: #e1e1e1;
+        }
+
+        #post-details, #single-post-details {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e9e9e9;
+            border-radius: 5px;
+        }
+
+        form input, form textarea, form button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Posts List</h1>
+    <ul id="posts-list"></ul>
+
+    <h2>Post Details</h2>
+    <div id="post-details"></div>
+
+    <h2>Create Post</h2>
+    <form id="create-post-form">
+        <input type="text" id="post-title" placeholder="Post Title" required>
+        <textarea id="post-body" placeholder="Post Body" required></textarea>
+        <button type="submit">Create Post</button>
+    </form>
+
+    <h2>Update Post</h2>
+    <form id="update-post-form">
+        <input type="number" id="update-post-id" placeholder="Post ID to update" required>
+        <input type="text" id="update-post-title" placeholder="New Title" required>
+        <textarea id="update-post-body" placeholder="New Body" required></textarea>
+        <button type="submit">Update Post</button>
+    </form>
+
+    <h2>Delete Post</h2>
+    <input type="number" id="delete-post-id" placeholder="Post ID to delete" required>
+    <button id="delete-post-btn">Delete Post</button>
+
+    <h2>Get Post By ID</h2>
+    <form id="get-post-by-id-form">
+        <input type="number" id="get-post-id" placeholder="Post ID to get" required>
+        <button type="submit">Get Post</button>
+    </form>
+
+    <div id="single-post-details"></div>
+</div>
+
+<script type="module" src="main.js"></script>
+
+</body>
+</html>
